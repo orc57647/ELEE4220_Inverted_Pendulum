@@ -39,6 +39,7 @@ void loop(){
   
   if(isnan(accAngle));
   else
+    Serial.print("Angle of Acceleration is: ");
     Serial.println(accAngle);
 
     
