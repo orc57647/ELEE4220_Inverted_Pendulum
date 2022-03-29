@@ -1,1 +1,1 @@
-Print.serial("Hi Group");
+Serial.print("Hi Group");
