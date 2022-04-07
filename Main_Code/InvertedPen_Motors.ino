@@ -13,8 +13,8 @@ const int motor_TL_R = 4; // Wire into IN1 of L298N, Associated with Red Motor W
 const int motor_TL_B = 5; // Wire into IN2 of L298N, Associated with Black Motor Wire
 
 // Motor Top Right
-const int motor_TR_R = 7; // Wire into IN3 of L298N, Associated with Red Motor Wire
-const int motor_TR_B = 6; // Wire into IN4 of L298N, Associated with Black Motor Wire
+const int motor_TR_R = 6; // Wire into IN3 of L298N, Associated with Red Motor Wire
+const int motor_TR_B = 7; // Wire into IN4 of L298N, Associated with Black Motor Wire
 
 void setup() 
 {
@@ -26,12 +26,14 @@ void setup()
   pinMode(motor_BR_B, OUTPUT);
   
   pinMode(motor_TL_R, OUTPUT);
-  pinMode(motor_TL_B, OUTPUT);
+  pinMode(motor_TL_B, OUTPUT); 
   
   pinMode(motor_TR_R, OUTPUT);
   pinMode(motor_TR_B, OUTPUT);
 
 //This code will test the motor to see which color does which
+
+  delay(500);
 
   // Turn motor Counter Clockwise(Forward) for 2 seconds 
   digitalWrite(motor_BL_R, HIGH);
@@ -42,7 +44,7 @@ void setup()
   digitalWrite(motor_TL_B, LOW);
   digitalWrite(motor_TR_R, HIGH);
   digitalWrite(motor_TR_B, LOW);
-  delay(500); // time in ms, 2000 ms = 2 sec
+  delay(1000); // time in ms, 2000 ms = 2 sec
 
   // Turn motor Clockwise(Backwards) for 2 seconds 
   digitalWrite(motor_BL_R, LOW);
@@ -53,7 +55,7 @@ void setup()
   digitalWrite(motor_TL_B, HIGH);
   digitalWrite(motor_TR_R, LOW);
   digitalWrite(motor_TR_B, HIGH);
-  delay(500); // time in ms, 2000 ms = 2 sec
+  delay(1000); // time in ms, 2000 ms = 2 sec
 
    // Stop Motors from moving 
   digitalWrite(motor_BL_R, LOW);
