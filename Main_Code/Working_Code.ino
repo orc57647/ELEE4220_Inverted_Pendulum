@@ -20,7 +20,7 @@ float gyroAngle=0;
 unsigned long currTime, prevTime=0, timeChange;
 int motor1_speed;
 int motor2_speed;
-double Kp=18, Kd=6 //need to tune these values once the motors move continously 
+double Kp=18, Kd=6; //need to tune these values once the motors move continously 
 double setpoint=2, sampleTime;
 float error, output;
 bool first = 1;
